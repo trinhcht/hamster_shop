@@ -1,35 +1,12 @@
 body{
-    /*background: #f3f3f3;*/
     background-image: url("../image/background.jpg");
 }
 
-.container{
-
-}
 
 .banner-img{
     margin-top: 8%;
     margin-left: 11%;
 
-}
-
-/*img {*/
-/*    border-radius: 30%;*/
-/*    border: 0.3rem solid hotpink;*/
-/*    background-clip: padding-box;*/
-/*    !*border-image: linear-gradient(to bottom, pink, purple);*!*/
-/*    animation: bounce 2s infinite;*/
-/*}*/
-
-
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
 
 
