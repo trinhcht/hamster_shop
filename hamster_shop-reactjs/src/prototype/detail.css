@@ -1,0 +1,36 @@
+
+.hamster {
+    position: relative;
+    display: inline-block;
+}
+
+.hamster:hover .hamster-info {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.product-images img {
+    position: relative;
+    display: inline-block;
+}
+
+.product-images img:hover:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200%;
+    height: 200%;
+    background: url('../image/hamster1.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.7;
+    transform: scale(2);
+}
+
+

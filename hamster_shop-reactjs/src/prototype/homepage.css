@@ -438,30 +438,20 @@ a {
     color: #777a7c
 }
 
-/*.description {*/
-/*    font-size: 12px*/
-/*}*/
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
 
-/*.fa-facebook-f {*/
-/*    color: #3b5999*/
-/*}*/
-
-/*.fa-instagram {*/
-/*    color: #e4405f*/
-/*}*/
-
-/*.fa-youtube {*/
-/*    color: #cd201f*/
-/*}*/
-
-/*.fa-twitter {*/
-/*    color: #55acee*/
-/*}*/
-
-/*.logo-footer{*/
-/*    height:30px;*/
-/*}*/
-
-/*.footer-copyright p {*/
-/*    margin-top: 10px*/
-/*}*/
+.slide {
+    flex: 0 0 auto;
+    width: 380px;
+    margin-right: 1rem;
+    scroll-snap-align: start;
+}
+.carousel-control-prev {
+    left: 21px;
+}
