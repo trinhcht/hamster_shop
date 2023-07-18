@@ -1,50 +1,152 @@
-import React from 'react'
+import React from "react";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" style={{ backgroundColor: "#ffcce5", height: "6rem", }}>
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/" style={{ color: "white", width: "10%" }}>
-                    <img class="logo-img" width="100%" alt="" src="../image/Logo.png" /></a>
-                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
-                    <span class="navbar-toggler-icon"></span>
+        <nav
+            className="navbar navbar-expand-lg bg-body-tertiary"
+            style={{ backgroundColor: "#ffcce5", height: "6rem" }}
+        >
+            <div className="container-fluid">
+                <Link
+                    className="navbar-brand"
+                    style={{ color: "white", width: "10%" }}
+                >
+                    <img
+                        className="logo-img"
+                        width="100%"
+                        alt=""
+                        src="../image/Logo.png"
+                    />
+                </Link>
+                <button
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    className="navbar-toggler"
+                    data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse"
+                    type="button"
+                >
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style={{ width: "100%" }}>
-                        <li class="nav-item" style={{ width: "25%", textAlign: "center", fontSize: "20px" }}>
-                            <a aria-current="page" class="nav-link active" href="/" style={{ color: "#663399" }}>Trang chủ</a>
+                <div
+                    className="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul
+                        className="navbar-nav me-auto mb-2 mb-lg-0"
+                        style={{ width: "100%" }}
+                    >
+                        <li
+                            className="nav-item"
+                            style={{
+                                width: "25%",
+                                textAlign: "center",
+                                fontSize: "20px",
+                            }}
+                        >
+                            <Link
+                                className="nav-link active"
+                                style={{ color: "#663399" }}
+                            >
+                                Trang chủ
+                            </Link>
                         </li>
-                        <li class="nav-item dropdown" style={{ width: "25%", textAlign: "center", fontSize: "20px" }}>
-                            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="/"
-                                role="button" style={{ color: "#663399" }}>
+                        <li
+                            className="nav-item dropdown"
+                            style={{
+                                width: "25%",
+                                textAlign: "center",
+                                fontSize: "20px",
+                            }}
+                        >
+                            <Link
+                                className="nav-link dropdown-toggle"
+                                style={{ color: "#663399" }}
+                            >
                                 Sản phẩm
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/">Hamster</a></li>
-                                <li><a class="dropdown-item" href="/">Nhà cho bé</a></li>
-                                <li><a class="dropdown-item" href="/">Thức ăn cho bé</a></li>
-                                <li><a class="dropdown-item" href="/">Phụ kiện xinh</a></li>
+                            </Link>
+                            <ul className="dropdown-menu">
+                                <li>
+
+                                    <Link className="dropdown-item" href="/">
+                                        Hamster
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" href="/">
+                                        Nhà cho bé
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" href="/">
+                                        Thức ăn cho bé
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" href="/">
+                                        Phụ kiện xinh
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
-                        <li class="nav-item" style={{ width: "25%", textAlign: "center", fontSize: "20px" }}>
-                            <a class="nav-link" href="/" style={{ color: "#663399" }}>Cách chăm sóc Hamster</a>
+                        <li
+                            className="nav-item"
+                            style={{
+                                width: "25%",
+                                textAlign: "center",
+                                fontSize: "20px",
+                            }}
+                        >
+                            <Link
+                                className="nav-link"
+                                href="/"
+                                style={{ color: "#663399" }}
+                            >
+                                Cách chăm sóc Hamster
+                            </Link>
                         </li>
-                        <li class="nav-item" style={{ width: "25%", textAlign: "center", fontSize: "20px" }}>
-                            <a class="nav-link disabled" href="/" style={{ color: "#663399" }}>Liên hệ</a>
+                        <li
+                            className="nav-item"
+                            style={{
+                                width: "25%",
+                                textAlign: "center",
+                                fontSize: "20px",
+                            }}
+                        >
+                            <Link
+                                className="nav-link disabled"
+                                style={{ color: "#663399" }}
+                            >
+                                Liên hệ
+                            </Link>
                         </li>
-                    </ul >
-                    <form class="d-flex" role="search">
-                        <input aria-label="Search" class="form-control me-2" type="search" />
-                        <button class="btn btn-outline-success"
-                            style={{ fontSize: "20px", color: "white", borderColor: "#663399", background: "#663399", width: "11rem" }}
-                            type="submit">Tìm kiếm
+                    </ul>
+                    <form className="d-flex" role="search">
+                        <input
+                            aria-label="Search"
+                            className="form-control me-2"
+                            type="search"
+                        />
+                        <button
+                            className="btn btn-outline-success"
+                            style={{
+                                fontSize: "20px",
+                                color: "white",
+                                borderColor: "#663399",
+                                background: "#663399",
+                                width: "11rem",
+                            }}
+                            type="submit"
+                        >
+                            Tìm kiếm
                         </button>
-                    </form >
-                </div >
-            </div >
-        </nav >
-    )
-}
+                    </form>
+                </div>
+            </div>
+        </nav>
+    );
+};
 
-export default Header
+export default Header;
