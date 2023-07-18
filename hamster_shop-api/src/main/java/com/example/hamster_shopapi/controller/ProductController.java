@@ -17,22 +17,22 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 @RequestMapping("/api/public/product")
 public class ProductController {
-    @Qualifier("IProductService")
+
     @Autowired
-    private IProductService iProductService;
+    private IProductService productService;
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("")
     public Page<Product> showListProduct(@RequestParam(name = "name", defaultValue = "") String name,
                                          @RequestParam(name = "idType", defaultValue = "0") Integer idType,
                                          @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC, size = 8) Pageable pageable) {
-        return iProductService.findProductByTypeProduct(name, idType, pageable);
+        return productService.findProductByTypeProduct(name, idType, pageable);
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/detail/{id}")
     public ResponseEntity<?> findProductById(@PathVariable("id") Integer id) {
-        Product figureProduct = iProductService.findById(id);
+        Product figureProduct = productService.findById(id);
         return new ResponseEntity<>(figureProduct, HttpStatus.OK);
     }
 

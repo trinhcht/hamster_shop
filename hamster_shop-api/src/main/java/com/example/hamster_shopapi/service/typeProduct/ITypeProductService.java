@@ -1,4 +1,4 @@
-package com.example.hamster_shopapi.service.product;
+package com.example.hamster_shopapi.service.typeProduct;
 
 import com.example.hamster_shopapi.model.ProductType;
 import org.springframework.stereotype.Service;

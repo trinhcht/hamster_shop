@@ -1,8 +1,8 @@
-package com.example.hamster_shopapi.service.product.impl;
+package com.example.hamster_shopapi.service.typeProduct.impl;
 
 import com.example.hamster_shopapi.model.ProductType;
 import com.example.hamster_shopapi.repository.IProductTypeRepository;
-import com.example.hamster_shopapi.service.product.ITypeProductService;
+import com.example.hamster_shopapi.service.typeProduct.ITypeProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

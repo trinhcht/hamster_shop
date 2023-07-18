@@ -18,16 +18,16 @@ import java.util.*;
 @Service
 public class CartService implements ICartService {
     @Autowired
-    private ICartRepository iCartRepository;
+    private ICartRepository cartRepository;
 
     @Override
     public List<Cart> findAllCart(String name) {
-        return iCartRepository.findCartByCustomer_AccountUser_NameAccount(name);
+        return cartRepository.findCartByCustomer_AccountUser_NameAccount(name);
     }
 
     @Override
     public Cart existCart(int idCustomer, int idProduct) {
-        return iCartRepository.findCartByCustomer_IdAndFigureProduct_Id(idCustomer, idProduct);
+        return cartRepository.findCartByCustomer_IdAndProduct_Id(idCustomer, idProduct);
     }
 
     @Override
@@ -42,22 +42,22 @@ public class CartService implements ICartService {
 
     @Override
     public void add(Cart cart) {
-        iCartRepository.save(cart);
+        cartRepository.save(cart);
     }
 
     @Override
     public void delete(Cart cart) {
-        iCartRepository.delete(cart);
+        cartRepository.delete(cart);
     }
 
     @Override
     public Cart findById(int id) {
-        return iCartRepository.findById(id).get();
+        return cartRepository.findById(id).get();
     }
 
     @Override
     public List<Cart> findCartByCustomerId(int id) {
-        return iCartRepository.findCartByCustomer_Id(id);
+        return cartRepository.findCartByCustomer_Id(id);
     }
 
     @Override

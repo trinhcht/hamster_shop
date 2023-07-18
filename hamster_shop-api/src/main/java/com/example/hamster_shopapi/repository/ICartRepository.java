@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface ICartRepository extends JpaRepository<Cart, Integer> {
     List<Cart> findCartByCustomer_AccountUser_NameAccount(String name);
-    Cart findCartByCustomer_IdAndFigureProduct_Id(int idCustomer , int product);
+    Cart findCartByCustomer_IdAndProduct_Id(int idCustomer , int product);
     List<Cart> findCartByCustomer_Id(int id);
 }

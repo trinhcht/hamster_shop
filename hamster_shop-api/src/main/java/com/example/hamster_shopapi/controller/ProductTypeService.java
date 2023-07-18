@@ -1,7 +1,7 @@
 package com.example.hamster_shopapi.controller;
 
 import com.example.hamster_shopapi.model.ProductType;
-import com.example.hamster_shopapi.service.product.ITypeProductService;
+import com.example.hamster_shopapi.service.typeProduct.ITypeProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -13,12 +13,11 @@ import java.util.List;
 @RequestMapping("/api/public/product-type")
 @CrossOrigin("*")
 public class ProductTypeService {
-    @Qualifier("ITypeProductService")
     @Autowired
-    private ITypeProductService iTypeProductService;
+    private ITypeProductService typeProductService;
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("")
     public List<ProductType> findAllProductType(){
-        return iTypeProductService.findAll();
+        return typeProductService.findAll();
     }
 }
