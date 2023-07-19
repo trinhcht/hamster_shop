@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Layout from "../../templates/Layout";
 import "./index.css";
-import { Link } from "react-router-dom";
-
+import { Slider } from "../../atoms/Slider";
 export const HomePage = () => {
     return (
         <Layout>
@@ -183,6 +183,7 @@ export const HomePage = () => {
                             </div>
                         </div>
                     </div>
+                    <Slider></Slider>
                 </div>
                 <Link
                     className="carousel-control-prev"
