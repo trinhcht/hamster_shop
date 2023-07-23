@@ -438,14 +438,6 @@ a {
   color: #777a7c;
 }
 
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
 .slide {
   flex: 0 0 auto;
   width: 380px;

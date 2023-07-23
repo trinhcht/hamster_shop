@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import Layout from "../../templates/Layout";
 import "./index.css";
 import { Slider } from "../../atoms/Slider";
+import { Divider } from "antd";
+import { Item } from '../../atoms/Slider/Item';
+
 export const HomePage = () => {
     return (
         <Layout>
@@ -12,22 +15,18 @@ export const HomePage = () => {
                 id="carouselExampleIndicators"
                 style={{ width: "100%" }}
             >
-                <div className="carousel-inner">
-                    <h5
-                        style={{
-                            marginLeft: "7.5rem",
-                            marginTop: "1.5rem",
-                            marginBottom: "-0.5rem",
-                        }}
-                    >
-                        Mua nhiều nhất
-                    </h5>
+                <div>
                     <div
                         className="row mx-0 mt-3 py-1"
                         style={{ padding: "0 100px" }}
                     >
-                        <div className="col-2 d-flex justify-content-center">
-                            <div className="card" style={{ width: "380px" }}>
+                        <Divider orientation="left">
+                            Mua nhiều nhất
+                        </Divider>
+                    </div>
+                    <Slider>
+                        <Item>
+                            <div className="card">
                                 <img
                                     alt="..."
                                     className="card-img-top"
@@ -50,9 +49,9 @@ export const HomePage = () => {
                                     </Link>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-2 d-flex justify-content-center">
-                            <div className="card" style={{ width: "380px" }}>
+                        </Item>
+                        <Item>
+                            <div className="card">
                                 <img
                                     alt="..."
                                     className="card-img-top"
@@ -75,9 +74,9 @@ export const HomePage = () => {
                                     </Link>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-2 d-flex justify-content-center">
-                            <div className="card" style={{ width: "380px" }}>
+                        </Item>
+                        <Item>
+                            <div className="card">
                                 <img
                                     alt="..."
                                     className="card-img-top"
@@ -100,9 +99,9 @@ export const HomePage = () => {
                                     </Link>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-2 d-flex justify-content-center">
-                            <div className="card" style={{ width: "380px" }}>
+                        </Item>
+                        <Item>
+                            <div className="card">
                                 <img
                                     alt="..."
                                     className="card-img-top"
@@ -125,9 +124,9 @@ export const HomePage = () => {
                                     </Link>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-2 d-flex justify-content-center">
-                            <div className="card" style={{ width: "380px" }}>
+                        </Item>
+                        <Item>
+                            <div className="card">
                                 <img
                                     alt="..."
                                     className="card-img-top"
@@ -153,9 +152,9 @@ export const HomePage = () => {
                                     </Link>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-2 d-flex justify-content-center">
-                            <div className="card" style={{ width: "380px" }}>
+                        </Item>
+                        <Item>
+                            <div className="card">
                                 <img
                                     alt="..."
                                     className="card-img-top"
@@ -181,9 +180,64 @@ export const HomePage = () => {
                                     </Link>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <Slider></Slider>
+                        </Item>
+                        <Item>
+                            <div className="card">
+                                <img
+                                    alt="..."
+                                    className="card-img-top"
+                                    src="../../../image/wheel-chong-on.png"
+                                />
+                                <div className="card-body">
+                                    <h5
+                                        className="card-title"
+                                        style={{
+                                            height: "3rem",
+                                            display: "block",
+                                        }}
+                                    >
+                                        Wheel chống ồn
+                                    </h5>
+                                    <p className="card-text">200.000 vnd</p>
+                                    <Link
+                                        className="btn btn-primary me-2"
+                                        href="/"
+                                        style={{ display: "block" }}
+                                    >
+                                        Mua hàng
+                                    </Link>
+                                </div>
+                            </div>
+                        </Item>
+                        <Item>
+                            <div className="card">
+                                <img
+                                    alt="..."
+                                    className="card-img-top"
+                                    src="../../../image/wheel-chong-on.png"
+                                />
+                                <div className="card-body">
+                                    <h5
+                                        className="card-title"
+                                        style={{
+                                            height: "3rem",
+                                            display: "block",
+                                        }}
+                                    >
+                                        Wheel chống ồn
+                                    </h5>
+                                    <p className="card-text">200.000 vnd</p>
+                                    <Link
+                                        className="btn btn-primary me-2"
+                                        href="/"
+                                        style={{ display: "block" }}
+                                    >
+                                        Mua hàng
+                                    </Link>
+                                </div>
+                            </div>
+                        </Item>
+                    </Slider>
                 </div>
                 <Link
                     className="carousel-control-prev"
@@ -309,15 +363,9 @@ export const HomePage = () => {
                     className="row mx-0 mt-3 py-1"
                     style={{ padding: "0 100px" }}
                 >
-                    <h5
-                        style={{
-                            marginLeft: "7.5rem",
-                            marginTop: "1.5rem",
-                            marginBottom: "-0.5rem",
-                        }}
-                    >
+                    <Divider orientation="left">
                         Đang khuyến mãi
-                    </h5>
+                    </Divider>
                     <div className="col-2 d-flex justify-content-center">
                         <div className="card" style={{ width: "380px" }}>
                             <img
