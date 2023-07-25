@@ -3,7 +3,6 @@ package com.example.hamster_shopapi.controller;
 import com.example.hamster_shopapi.model.Product;
 import com.example.hamster_shopapi.service.product.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -25,7 +24,7 @@ public class ProductController {
     @GetMapping("")
     public Page<Product> showListProduct(@RequestParam(name = "name", defaultValue = "") String name,
                                          @RequestParam(name = "idType", defaultValue = "0") Integer idType,
-                                         @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC, size = 8) Pageable pageable) {
+                                         @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC, size = 5) Pageable pageable) {
         return productService.findProductByTypeProduct(name, idType, pageable);
     }
 

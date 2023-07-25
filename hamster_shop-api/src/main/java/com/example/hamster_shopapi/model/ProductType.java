@@ -1,6 +1,7 @@
 package com.example.hamster_shopapi.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "product_type")
@@ -9,6 +10,7 @@ public class ProductType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
 
     public ProductType() {
     }

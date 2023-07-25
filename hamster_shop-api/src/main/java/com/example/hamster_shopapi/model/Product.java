@@ -9,19 +9,21 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    private String description;
     private String img;
     private Double price;
     private Integer quantity;
     @ManyToOne
-    @JoinColumn(columnDefinition = "id_product_type")
+    @JoinColumn(name = "product_type_id", referencedColumnName = "id")
     private ProductType productType;
 
     public Product() {
     }
 
-    public Product(int id, String name, String img, Double price, Integer quantity, ProductType productType) {
+    public Product(int id, String name, String description, String img, Double price, Integer quantity, ProductType productType) {
         this.id = id;
         this.name = name;
+        this.description = description;
         this.img = img;
         this.price = price;
         this.quantity = quantity;
@@ -42,6 +44,14 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String describe) {
+        this.description = describe;
     }
 
     public String getImg() {
