@@ -74,7 +74,6 @@ public class CartService implements ICartService {
         vnp_Params.put("vnp_Command", vnp_Command);
         vnp_Params.put("vnp_TmnCode", vnp_TmnCode);
         vnp_Params.put("vnp_Amount", String.valueOf((int) (requestPayment.getTotalPrice() * 100)));
-//        vnp_Params.put("vnp_Amount", "1423523523");
         vnp_Params.put("vnp_CurrCode", "VND");
         vnp_Params.put("vnp_BankCode", "NCB");
 

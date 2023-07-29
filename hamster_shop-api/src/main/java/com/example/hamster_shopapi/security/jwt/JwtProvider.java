@@ -11,8 +11,8 @@ import java.util.Date;
 @Component
 public class JwtProvider {
     private static final Logger logger = LoggerFactory.getLogger(JwtProvider.class);
-    private String jwtSecret = "nghia123";
-    private long jwtExpiration = 80640000L;
+    private String jwtSecret = "trinh";
+    private long jwtExpiration = 1000*60*60*24*7;
     public String createToken(Authentication authentication) {
         UserPrinciple userPrinciple = (UserPrinciple) authentication.getPrincipal();
         return Jwts.builder().setSubject(userPrinciple.getUsername())

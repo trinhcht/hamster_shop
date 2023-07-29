@@ -26,7 +26,7 @@ import javax.validation.Valid;
 import java.util.*;
 
 @RestController
-@RequestMapping("/api/public")
+@RequestMapping("/api/auth")
 @CrossOrigin("*")
 public class UserRestController {
     @Autowired
@@ -40,10 +40,10 @@ public class UserRestController {
     @Autowired
     JwtProvider jwtProvider;
 
-    @PostMapping("/signup")
+    @PostMapping("/logout")
     public ResponseEntity<?> signup(@Valid @RequestBody SignUpForm signUpForm) {
         if (accountUserService.existByNameAccount(signUpForm.getUsername())) {
-            return new ResponseEntity<>(new ResponseMessage("The username existed !!, Try again"), HttpStatus.OK);
+            return new ResponseEntity<>(new ResponseMessage("The username existed!, Try again"), HttpStatus.OK);
         }
         AccountUser users = new AccountUser(signUpForm.getUsername(), passwordEncoder.encode(signUpForm.getPassword()));
         Set<String> strRoles = signUpForm.getRoles();
@@ -67,19 +67,19 @@ public class UserRestController {
         System.out.println(users);
         AccountUser accountUser = accountUserService.saveAccountUser(users);
         if (accountUser != null) {
-            return new ResponseEntity<>(new ResponseMessage("Create user success!!!"), HttpStatus.CREATED);
+            return new ResponseEntity<>(new ResponseMessage("Create user success!"), HttpStatus.CREATED);
         }
-        return new ResponseEntity<>(new ResponseMessage("Create user failed!!!"), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(new ResponseMessage("Create user failed!"), HttpStatus.BAD_REQUEST);
     }
 
-    @PostMapping("/signin")
+    @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody SignInForm signInForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             List<ErrorMessage> errorMessages = new ArrayList<>();
             bindingResult
                     .getFieldErrors()
                     .stream()
-                    .forEach(f -> errorMessages.add(new ErrorMessage(f.getField(), f.getDefaultMessage())));
+                    .forEach(p -> errorMessages.add(new ErrorMessage(p.getField(), p.getDefaultMessage())));
             return new ResponseEntity<>(errorMessages, HttpStatus.BAD_REQUEST);
         }
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(signInForm.getUsername(), signInForm.getPassword()));
