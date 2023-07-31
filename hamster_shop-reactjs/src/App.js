@@ -6,7 +6,7 @@ import Detail from "./components/pages/Detail";
 import {Cart} from "./components/pages/Cart";
 import Header from "./components/organisms/Header";
 import Footer from "./components/organisms/Footer";
-import {QuantityProvider} from "./component/ValueIconCartContext";
+// import {QuantityProvider} from "./component/ValueIconCartContext";
 import Login from "./components/login";
 
 function App() {
